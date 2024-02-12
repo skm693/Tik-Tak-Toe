@@ -10,7 +10,23 @@ function cl(x) {
                 break;
             }
         }
-        if (left == 0) {
+
+        let c1 = document.getElementById('b1').innerHTML;
+        let c2 = document.getElementById('b2').innerHTML;
+        let c3 = document.getElementById('b3').innerHTML;
+        let c4 = document.getElementById('b4').innerHTML;
+        let c5 = document.getElementById('b5').innerHTML;
+        let c6 = document.getElementById('b6').innerHTML;
+        let c7 = document.getElementById('b7').innerHTML;
+        let c8 = document.getElementById('b8').innerHTML;
+        let c9 = document.getElementById('b9').innerHTML;
+        let winnar = 0;
+        if ((c1 == "O" && c2 == "O" && c3 == "O") || (c4 == "O" && c5 == "O" && c6 == "O") || (c7 == "O" && c8 == "O" && c9 == "O") || (c1 == "O" && c4 == "O" && c7 == "O") || (c2 == "O" && c5 == "O" && c8 == "O") || (c3 == "O" && c6 == "O" && c9 == "O") || (c1 == "O" && c5 == "O" && c9 == "O") || (c3 == "O" && c5 == "O" && c7 == "O")) {
+            document.getElementById('pop_up').style.display = "flex";
+            document.getElementById('rest').style.display = "none";
+            winnar = 1;
+        }
+        if (left == 0 && winnar==0) {
             document.getElementById('pop_up3').style.display = "flex";
             document.getElementById('rest').style.display = "none";
         }
@@ -31,22 +47,8 @@ function cl(x) {
                 }
             }
 
-            let c1 = document.getElementById('b1').innerHTML;
-            let c2 = document.getElementById('b2').innerHTML;
-            let c3 = document.getElementById('b3').innerHTML;
-            let c4 = document.getElementById('b4').innerHTML;
-            let c5 = document.getElementById('b5').innerHTML;
-            let c6 = document.getElementById('b6').innerHTML;
-            let c7 = document.getElementById('b7').innerHTML;
-            let c8 = document.getElementById('b8').innerHTML;
-            let c9 = document.getElementById('b9').innerHTML;
-            let winnar=0;
-            if ((c1 == "O" && c2 == "O" && c3 == "O") || (c4 == "O" && c5 == "O" && c6 == "O") || (c7 == "O" && c8 == "O" && c9 == "O") || (c1 == "O" && c4 == "O" && c7 == "O") || (c2 == "O" && c5 == "O" && c8 == "O") || (c3 == "O" && c6 == "O" && c9 == "O") || (c1 == "O" && c5 == "O" && c9 == "O") || (c3 == "O" && c5 == "O" && c7 == "O")) {
-                document.getElementById('pop_up').style.display = "flex";
-                document.getElementById('rest').style.display = "none";
-                winnar=1;
-            }
-            if (ch == 1 && winnar==0) {
+
+            if (ch == 1 && winnar == 0) {
                 document.getElementById(zz).innerHTML = "X";
                 c1 = document.getElementById('b1').innerHTML;
                 c2 = document.getElementById('b2').innerHTML;
