@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tik Tak Toe</title>
+    <link rel="stylesheet" href="tik_tak_tao_style.css">
+    <script src="javascript.js"></script>
+</head>
+
+<body>
+    <div class="main_box">
+        <h1>Tik Tak Toe</h1>
+        <div class="large_box">
+            <button class="small_box" id="b1" onclick="cl('1')"></button>
+            <button class="small_box" id="b2" onclick="cl('2')"></button>
+            <button class="small_box" id="b3" onclick="cl('3')"></button>
+            <button class="small_box" id="b4" onclick="cl('4')"></button>
+            <button class="small_box" id="b5" onclick="cl('5')"></button>
+            <button class="small_box" id="b6" onclick="cl('6')"></button>
+            <button class="small_box" id="b7" onclick="cl('7')"></button>
+            <button class="small_box" id="b8" onclick="cl('8')"></button>
+            <button class="small_box" id="b9" onclick="cl('9')"></button>
+
+            <div id="pop_up" style="display: none;">
+                <h1>Congratulations, You Win</h1>
+                <button id="rest1" onclick="document.location='index.html'">Restart</button>
+            </div>
+            <div id="pop_up2" style="display:none;">
+                <h1>You Loose</h1>
+                <button id="rest1" onclick="document.location='index.html'">Restart</button>
+            </div>
+            <div id="pop_up3" style="display: none;">
+                <h1>Match Draw</h1>
+                <button id="rest1" onclick="document.location='index.html'">Restart</button>
+            </div>
+        </div>
+        <button id="rest" onclick="click_button()">Restart</button>
+    </div>
+</body>
+
+</html>
